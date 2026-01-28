@@ -1,0 +1,112 @@
+/* Premium Product Card Styles */
+.premium-product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.4), 0 10px 10px -5px rgba(0, 0, 0, 0.3) !important;
+  border-color: #334155 !important;
+}
+
+.premium-product-card:hover .product-image {
+  transform: scale(1.08);
+}
+
+.premium-product-card:hover .gradient-overlay {
+  opacity: 1 !important;
+}
+
+.premium-product-card:hover .action-overlay {
+  opacity: 1 !important;
+  transform: translateX(0) !important;
+}
+
+.premium-product-card:hover .add-to-cart-wrapper {
+  transform: translateY(0) !important;
+}
+
+.premium-product-card .product-title:hover {
+  color: #D4AF37 !important;
+}
+
+/* Image Container Enhancements */
+.image-container {
+  position: relative;
+  overflow: hidden;
+  background: #0F172A;
+}
+
+.image-container img {
+  min-width: 100%;
+  min-height: 100%;
+}
+
+/* Subtle shine effect on hover */
+.image-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.15), transparent);
+  transition: left 0.6s ease;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.premium-product-card:hover .image-container::after {
+  left: 100%;
+}
+
+/* Smooth Scrollbar for the app */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #334155 #0F172A;
+}
+
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #0F172A;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 5px;
+  border: 2px solid #0F172A;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: #D4AF37;
+}
+
+/* Admin Product Image Uploader Styles */
+.product-image-uploader .ant-upload-list-item-container {
+  width: 150px !important;
+  height: 150px !important;
+}
+
+.product-image-uploader .ant-upload-select {
+  width: 150px !important;
+  height: 150px !important;
+  background: #111827 !important;
+  border: 2px dashed #334155 !important;
+  border-radius: 8px !important;
+  transition: all 0.3s ease;
+}
+
+.product-image-uploader .ant-upload-select:hover {
+  border-color: #D4AF37 !important;
+  background: #1e293b !important;
+}
+
+.product-image-uploader .ant-upload-list-item {
+  border: 1px solid #334155 !important;
+  border-radius: 8px !important;
+  background: #111827 !important;
+}
+
+.product-image-uploader .ant-upload-list-item-thumbnail img {
+  object-fit: cover !important;
+}
